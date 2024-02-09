@@ -24,6 +24,7 @@ function saveFormTextEmail(eve) {
   //   formEL.email.value = savedMessageParse.email;
   //   formEL.message.value = savedMessageParse.message;
   // }
+
   Object.entries(formData).forEach(([name, value]) => {
     formEL[name].value = value;
   });
@@ -35,7 +36,7 @@ function savedMessageLocalStorage() {
   if (savedMessage) {
     try {
       const savedMessageParse = JSON.parse(savedMessage);
-      console.log(savedMessageParse);
+      // console.log(savedMessageParse);
       // formData.message = savedMessageParse.message;
       // formData.email = savedMessageParse.email;
       formData = Object.assign(savedMessageParse);
@@ -50,6 +51,6 @@ function savedMessageLocalStorage() {
 function onSubmit(eve) {
   eve.preventDefault();
   eve.currentTarget.reset();
-  console.log(formData);
+  // console.log(formData);
   localStorage.removeItem(FORMVALUE);
 }

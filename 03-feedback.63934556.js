@@ -1,0 +1,2 @@
+const e=document.querySelector(".feedback-form");let t={};e.addEventListener("input",(function(e){t[e.target.name]=e.target.value,localStorage.setItem("feedback-form-state",JSON.stringify(t))})),e.addEventListener("submit",(function(e){e.preventDefault(),e.currentTarget.reset(),localStorage.removeItem("feedback-form-state")})),function(){const e=localStorage.getItem("feedback-form-state");if(e)try{const a=JSON.parse(e);t=Object.assign(a)}catch(e){console.log(e.name)}}(),Object.entries(t).forEach((([t,a])=>{e[t].value=a}));
+//# sourceMappingURL=03-feedback.63934556.js.map
